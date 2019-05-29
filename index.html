@@ -13,7 +13,7 @@
     <h1 style="text-align: center;">NUEVO REGISTRO</h1>
     <div class="container">
         <div class="col-sm">
-          <form name="Validaciones" method="POST">
+          <form>
             <div class="form-group row">
               <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
               <div class="col-sm-10">
@@ -23,13 +23,13 @@
             <div class="form-group row">
               <label for="txtEmail" class="col-sm-2 col-form-label">Email</label>
               <div class="col-sm-10">
-                <input type="email" class="form-control" name="txtEmail" id="txtEmail" placeholder="Email">
+                <input type="email" class="form-control" name="txtEmail" id="txtEmail" placeholder="Email" onkeypress="return ValCorreo(event)">
               </div>
             </div>
             <div class="form-group row">
               <label for="txtTelefono" class="col-sm-2 col-form-label">Telefono</label>
               <div class="col-sm-10">
-                <input type="number" class="form-control" name="txtTelefono" id="txtTelefono" placeholder="Telefono" min="1" max="9999999999" onkeypress="return soloNumeros(event)">
+                <input type="number" class="form-control" name="txtTelefono" id="txtTelefono" placeholder="Telefono" min="1" maxlength="10" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
               </div>
             </div><div class="form-group">
             <label for="cmbEstadoCivil">Estado Civil</label>
@@ -63,32 +63,32 @@
               <div class="col-sm">INTERESES</div>
               <div class="col-sm">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck1">
-                  <label class="form-check-label" for="gridCheck1">
+                  <input class="form-check-input" type="checkbox" id="chck1">
+                  <label class="form-check-label" for="chck1">
                     Libros
                   </label>
                 </div>
               </div>
               <div class="col-sm">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck1">
-                  <label class="form-check-label" for="gridCheck1">
+                  <input class="form-check-input" type="checkbox" id="chck2">
+                  <label class="form-check-label" for="chck2">
                     Musica
                   </label>
                 </div>
               </div>
               <div class="col-sm">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck1">
-                  <label class="form-check-label" for="gridCheck1">
+                  <input class="form-check-input" type="checkbox" id="chck3">
+                  <label class="form-check-label" for="chck3">
                     Deportes
                   </label>
                 </div>
               </div>
               <div class="col-sm">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck1">
-                  <label class="form-check-label" for="gridCheck1">
+                  <input class="form-check-input" type="checkbox" id="chck4">
+                  <label class="form-check-label" for="chck4">
                     Otros
                   </label>
                 </div>
