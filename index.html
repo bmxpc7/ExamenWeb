@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <title>Examen Práctico Web</title>
+  </head>
+  <body>
+    <h1 style="text-align: center;">NUEVO REGISTRO</h1>
+    <div class="container">
+        <div class="col-sm">
+          <form name="Validaciones" method="POST">
+            <div class="form-group row">
+              <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="txtNombre" id="txtNombre" placeholder="Nombre" onkeypress="return soloLetras(event)">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="txtEmail" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" name="txtEmail" id="txtEmail" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="txtTelefono" class="col-sm-2 col-form-label">Telefono</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" name="txtTelefono" id="txtTelefono" placeholder="Telefono" min="1" max="9999999999" onkeypress="return soloNumeros(event)">
+              </div>
+            </div><div class="form-group">
+            <label for="cmbEstadoCivil">Estado Civil</label>
+            <select class="form-control" name="cmbEstadoCivil" id="cmbEstadoCivil">
+              <option>Soltero</option>
+              <option>Casado</option>
+            </select>
+            </div>
+            <fieldset class="form-group form-check-inline">
+              <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">¿Tienes Hijos?</legend>
+                <div class="col-sm-5">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                      SI
+                    </label>
+                  </div>
+                </div>
+                 <div class="col-sm-5">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <label class="form-check-label" for="gridRadios2">
+                      NO
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <div class="form-group row">
+              <div class="col-sm">INTERESES</div>
+              <div class="col-sm">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Libros
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Musica
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Deportes
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Otros
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="button" id="btnRegresar" class="btn btn-secondary">Regresar</button>
+                <button type="button" id="btnGuardar" class="btn btn-primary">Guardar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+    </div>
+
+    <table border="1" align="center" style="text-align: center;" id="tblEjercicio">
+</table>
+<hr>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Validaciones.js"></script>
+	</body>
+</html>
